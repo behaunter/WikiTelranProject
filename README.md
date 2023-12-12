@@ -4,10 +4,10 @@
 My name is Mykhailo Shved and it's my final project in Tel-Ran tech school to show my knowledge in Java Test automation.
 
 ## Contents
-- [Tech Stack](#TechStack)
-- [Main test packages/files](#Maintestpackages/files)
-- [How to add new tests?](#Howtoaddnewtests?)
-- [The possible ways to fix tests](#Thepossiblewaystofixtests)
+- [Tech Stack](#Tech-Stack)
+- [Main test packages/files](#Main-test-packages/files)
+- [How to add new tests?](#How-to-add-new-tests?)
+- [The possible ways to fix tests](#The-possible-ways-to-fix-tests)
 - [Authors](#Authors)
 
 ## Tech Stack
