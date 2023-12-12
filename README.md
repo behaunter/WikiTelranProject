@@ -5,8 +5,8 @@ My name is Mykhailo Shved and it's my final project in Tel-Ran tech school to sh
 
 ## Contents
 - [Tech Stack](#Tech-Stack)
-- [Main test packages/files](#Main-test-packages-/files)
-- [How to add new tests?](#How-to-add-new-tests-?)
+- [Main test packages/files](#main-test-packagesfiles)
+- [How to add new tests?](#how-to-add-new-tests)
 - [The possible ways to fix tests](#The-possible-ways-to-fix-tests)
 - [Authors](#Authors)
 
