@@ -1,4 +1,4 @@
-package dto;
+package com.telran.wikiApi.dto;
 
 import lombok.*;
 

@@ -1,6 +1,6 @@
-package api.tests;
+package com.telran.wikiApi.tests;
 
-import dto.*;
+import com.telran.wikiApi.dto.*;
 import io.qameta.allure.Epic;
 import org.testng.annotations.Test;
 

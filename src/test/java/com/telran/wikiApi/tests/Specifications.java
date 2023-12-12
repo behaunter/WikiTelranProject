@@ -1,4 +1,4 @@
-package api.tests;
+package com.telran.wikiApi.tests;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
