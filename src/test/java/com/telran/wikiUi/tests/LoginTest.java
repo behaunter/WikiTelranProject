@@ -3,7 +3,6 @@ package com.telran.wikiUi.tests;
 import com.telran.testData.Constants;
 import com.telran.wikiUI.pages.LoginPage;
 import com.telran.wikiUI.pages.MainPage;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -25,69 +24,69 @@ public class LoginTest extends TestBase {
 
     @Test
     public void successLogin(){
-        loginPage.logInAccount(Constants.validUserName, Constants.validPassword);
+        loginPage.logInAccount(Constants.VALID_USER_NAME, Constants.VALID_PASSWORD);
         loginPage.LogOutBtn.shouldBe(visible);
-        $(byText(Constants.validUserName)).shouldBe(visible);
+        $(byText(Constants.VALID_USER_NAME)).shouldBe(visible);
     }
 
     @Test
     public void incorrectLogin(){
-        loginPage.logInAccount(Constants.randUsername, Constants.randPassword);
-        loginPage.errorBox.shouldHave(text(Constants.incorrectDataError));
+        loginPage.logInAccount(Constants.RAND_USERNAME, Constants.RAND_PASSWORD);
+        loginPage.errorBox.shouldHave(text(Constants.INCORRECT_DATA_ERROR));
     }
 
     @Test
     public void loginWithSpacesInTheBeginning(){
-        loginPage.logInAccount(" " + Constants.validUserName, " " + Constants.validPassword);
-        loginPage.errorBox.shouldHave(text(Constants.incorrectDataError));
+        loginPage.logInAccount(" " + Constants.VALID_USER_NAME, " " + Constants.VALID_PASSWORD);
+        loginPage.errorBox.shouldHave(text(Constants.INCORRECT_DATA_ERROR));
     }
 
     @Test
     public void loginWithSpacesInTheEnd(){
-        loginPage.logInAccount(Constants.validUserName + " " ,  Constants.validPassword  + " ");
-        loginPage.errorBox.shouldHave(text(Constants.incorrectDataError));
+        loginPage.logInAccount(Constants.VALID_USER_NAME + " " ,  Constants.VALID_PASSWORD + " ");
+        loginPage.errorBox.shouldHave(text(Constants.INCORRECT_DATA_ERROR));
     }
 
     @Test
     public void loginWithSpacesInTheMiddle(){
-        loginPage.logInAccount(Constants.userNameWithSpaces, Constants.PasswordWithSpaces);
-        loginPage.errorBox.shouldHave(text(Constants.incorrectDataError));
+        loginPage.logInAccount(Constants.USER_NAME_WITH_SPACES, Constants.PASSWORD_WITH_SPACES);
+        loginPage.errorBox.shouldHave(text(Constants.INCORRECT_DATA_ERROR));
     }
 
     @Test
     public void tryXssScriptOnLoginFields(){
-        loginPage.logInAccount(Constants.xssScript, Constants.xssScript);
-        loginPage.errorBox.shouldHave(text(Constants.specialSymbolsError));
+        loginPage.logInAccount(Constants.XSS_SCRIPT, Constants.XSS_SCRIPT);
+        loginPage.errorBox.shouldHave(text(Constants.SPECIAL_SYMBOLS_ERROR));
     }
 
     @Test
     public void trySqlInjectionOnLoginFields(){
-        loginPage.logInAccount(Constants.sqlInjection, Constants.sqlInjection);
-        loginPage.errorBox.shouldHave(text(Constants.incorrectDataError));
+        loginPage.logInAccount(Constants.SQL_INJECTION, Constants.SQL_INJECTION);
+        loginPage.errorBox.shouldHave(text(Constants.INCORRECT_DATA_ERROR));
     }
 
     @Test
     public void tryLoginWithAdminCreds(){
-        loginPage.logInAccount(Constants.adminText, Constants.adminText);
-        loginPage.errorBox.shouldHave(text(Constants.incorrectDataError));
+        loginPage.logInAccount(Constants.ADMIN_TEXT, Constants.ADMIN_TEXT);
+        loginPage.errorBox.shouldHave(text(Constants.INCORRECT_DATA_ERROR));
     }
 
     @Test
     public void LoginWithHighRegistryLetters(){
-        loginPage.logInAccount(Constants.validUserName.toUpperCase(), Constants.validPassword.toUpperCase());
-        loginPage.errorBox.shouldHave(text(Constants.incorrectDataError));
+        loginPage.logInAccount(Constants.VALID_USER_NAME.toUpperCase(), Constants.VALID_PASSWORD.toUpperCase());
+        loginPage.errorBox.shouldHave(text(Constants.INCORRECT_DATA_ERROR));
     }
 
     @Test
     public void LoginWithLowRegistryLetters(){
-        loginPage.logInAccount(Constants.validUserName.toLowerCase(), Constants.validPassword.toLowerCase());
-        loginPage.errorBox.shouldHave(text(Constants.incorrectDataError));
+        loginPage.logInAccount(Constants.VALID_USER_NAME.toLowerCase(), Constants.VALID_PASSWORD.toLowerCase());
+        loginPage.errorBox.shouldHave(text(Constants.INCORRECT_DATA_ERROR));
     }
 
     @Test
     public void loginWithSpecialSymbols(){
-        loginPage.logInAccount(Constants.specSymbols, Constants.specSymbols);
-        loginPage.errorBox.shouldHave(text(Constants.specialSymbolsError));
+        loginPage.logInAccount(Constants.SPEC_SYMBOLS, Constants.SPEC_SYMBOLS);
+        loginPage.errorBox.shouldHave(text(Constants.SPECIAL_SYMBOLS_ERROR));
     }
 
     @Test
@@ -102,7 +101,7 @@ public class LoginTest extends TestBase {
         loginPage.joinTelRanLink.click();
         String currentUrl = getWebDriver().getCurrentUrl();
         assertEquals(currentUrl,Constants.JOIN_TELRAN_URL +
-                Constants.expectedJoinTelRanText);
+                Constants.EXPECTED_JOIN_TELRAN_TEXT);
     }
 
     @Test

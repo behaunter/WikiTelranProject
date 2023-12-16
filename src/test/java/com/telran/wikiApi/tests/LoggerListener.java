@@ -8,8 +8,8 @@ public class LoggerListener {
 
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger(LoggerListener.class);
-        logger.error("Вот тут произошла ошибка");
-        logger.info("Информационное поле");
+        logger.error("Here is an error");
+        logger.info("Information error");
 
 
     }

@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.page;
+
 
 
 public class CreateAccountTest extends TestBase{
@@ -24,47 +24,47 @@ public class CreateAccountTest extends TestBase{
 
     @Test
     public void successCreateAccountWithAllFields(){
-       createAccountPage.createAccount(Constants.testUsername, Constants.testPassword,Constants.testPassword,
-               Constants.testEmail, Constants.testRealName);
-       createAccountPage.header.shouldBe(visible).shouldHave(text(Constants.successfulRegister));
+       createAccountPage.createAccount(Constants.TEST_USERNAME, Constants.TEST_PASSWORD,Constants.TEST_PASSWORD,
+               Constants.TEST_EMAIL, Constants.TEST_REAL_NAME);
+       createAccountPage.header.shouldBe(visible).shouldHave(text(Constants.SUCCESSFUL_REGISTER));
 
     }
 
     @Test
     public void successCreateAccountWithReqFieldsOnly()  {
-        createAccountPage.createAccount(Constants.testUsername,Constants.testPassword,Constants.testPassword,
+        createAccountPage.createAccount(Constants.TEST_USERNAME,Constants.TEST_PASSWORD,Constants.TEST_PASSWORD,
                 "","");
-        createAccountPage.header.shouldBe(visible).shouldHave(text(Constants.successfulRegister));
+        createAccountPage.header.shouldBe(visible).shouldHave(text(Constants.SUCCESSFUL_REGISTER));
 
     }
 
     @Test
     public void checkMostCommonlyUsedPasswordError(){
-        createAccountPage.createAccount(Constants.testUsername,Constants.mostCommonPassword,Constants.mostCommonPassword,
+        createAccountPage.createAccount(Constants.TEST_USERNAME,Constants.MOST_COMMON_PASSWORD,Constants.MOST_COMMON_PASSWORD,
                 "","");
-        createAccountPage.errorBox.shouldBe(visible).shouldHave(text(Constants.mostCommonPassError));
+        createAccountPage.errorBox.shouldBe(visible).shouldHave(text(Constants.MOST_COMMON_PASS_ERROR));
     }
 
     @Test
     public void tooShortPasswordError(){
-        createAccountPage.createAccount(Constants.testUsername,Constants.shortPassword,Constants.shortPassword,
+        createAccountPage.createAccount(Constants.TEST_USERNAME,Constants.SHORT_PASSWORD,Constants.SHORT_PASSWORD,
                 "","");
-        createAccountPage.errorBox.shouldBe(visible).shouldHave(text(Constants.tooShortPassError));
+        createAccountPage.errorBox.shouldBe(visible).shouldHave(text(Constants.TOO_SHORT_PASS_ERROR));
     }
 
     @Test
     public void incorrectUsernameError(){
-        createAccountPage.createAccount(Constants.specSymbolsText,Constants.shortPassword,Constants.shortPassword,
+        createAccountPage.createAccount(Constants.SPEC_SYMBOLS_TEXT,Constants.SHORT_PASSWORD,Constants.SHORT_PASSWORD,
                 "","");
-        createAccountPage.errorBox.shouldBe(visible).shouldHave(text(Constants.incorrectUsernameError));
+        createAccountPage.errorBox.shouldBe(visible).shouldHave(text(Constants.INCORRECT_USERNAME_ERROR));
     }
 
     @Test
     public void retypePasswordIsNotCorrectError(){
-        createAccountPage.createAccount(Constants.testUsername,Constants.passWithSymbols,Constants.shortPassword,
+        createAccountPage.createAccount(Constants.TEST_USERNAME,Constants.PASS_WITH_SYMBOLS,Constants.SHORT_PASSWORD,
                 "","");
-        createAccountPage.errorBox.shouldBe(visible).shouldHave(text(Constants.problemsWithInputError));
-        $(byText(Constants.retypePassIsNotCorrect)).shouldBe(visible);
+        createAccountPage.errorBox.shouldBe(visible).shouldHave(text(Constants.PROBLEMS_WITH_INPUT_ERROR));
+        $(byText(Constants.RETYPE_PASS_IS_NOT_CORRECT)).shouldBe(visible);
     }
 
 }
