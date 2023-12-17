@@ -1,4 +1,4 @@
-package com.telran.wikiUI.pages;
+package com.wiki.ui.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;

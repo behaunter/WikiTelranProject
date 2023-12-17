@@ -1,7 +1,7 @@
-package com.telran.wikiUi.tests;
+package com.wiki.ui.tests;
 
-import com.telran.testData.Constants;
-import com.telran.wikiUI.pages.ProjectPage;
+import com.wiki.ui.pages.ProjectPage;
+import com.wiki.testdata.Constants;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.visible;

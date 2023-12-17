@@ -1,8 +1,8 @@
-package com.telran.wikiUi.tests;
+package com.wiki.ui.tests;
 
-import com.telran.testData.Constants;
-import com.telran.wikiUI.pages.CreateAccountPage;
-import com.telran.wikiUI.pages.MainPage;
+import com.wiki.testdata.Constants;
+import com.wiki.ui.pages.CreateAccountPage;
+import com.wiki.ui.pages.MainPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

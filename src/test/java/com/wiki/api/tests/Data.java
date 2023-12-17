@@ -1,4 +1,4 @@
-package com.telran.wikiApi.tests;
+package com.wiki.api.tests;
 
 import org.apache.commons.lang3.RandomStringUtils;
 

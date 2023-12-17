@@ -1,8 +1,10 @@
-package com.telran.wikiApi.tests;
+package com.wiki.api.tests;
 
-import com.telran.wikiApi.dto.*;
+
+import com.wiki.api.dto.*;
 import io.qameta.allure.Epic;
 import org.testng.annotations.Test;
+
 
 import java.util.List;
 
