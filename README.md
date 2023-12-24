@@ -26,20 +26,20 @@ My name is Mykhailo Shved and it's my final project in Tel-Ran tech school to sh
 ## Main test packages/files
 
 
-`src/main/java/com/telran/testData` contains all Constants that were used in test methods as Test Data;
+`src/main/java/com/wiki/testdata` contains all Constants that were used in test methods as Test Data;
 
-`src/main/java/com/telran/wikiApi/dto` contains all DTO (Data Transfer Object) that were used for API test;
+`src/main/java/com/wiki/api/dto` contains all DTO (Data Transfer Object) that were used for API test;
 
-`src/main/java/com/telran/wikiUI/pages` UI package contains all data regarding pages in POM (page object model);
+`src/main/java/com/wiki/ui/pages` UI package contains all data regarding pages in POM (page object model);
 
 `src/main/resources` contains information about allure reports and logback configuration;
 
-`com/telran/wikiUi/tests` contains different tests for UI automation of wiki site;
+`com/wiki/ui/tests` contains different tests for UI automation of wiki site;
 
-`com/telran/wikiApi/tests`
+`com/wiki/api/tests`
  contains different tests for API automation of wiki site;
 
-`src/test/java/com/telran/wikiUi/tests/TestBase.java`  Base Class for Test configurations of Selenide Framework;
+`src/test/java/com/wiki/ui/tests/TestBase.java`  Base Class for Test configurations of Selenide Framework;
 
 ## How to add new tests?
 
