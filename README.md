@@ -7,8 +7,11 @@ My name is Mykhailo Shved and it's my final project in Tel-Ran tech school to sh
 - [Tech Stack](#Tech-Stack)
 - [Main test packages/files](#main-test-packagesfiles)
 - [How to add new tests?](#how-to-add-new-tests)
+- [How to run tests?](#How-to-run-tests)
+- [How to serve report after tests?](#How-to-serve-report-after-tests)
 - [The possible ways to fix tests](#The-possible-ways-to-fix-tests)
 - [Authors](#Authors)
+
 
 ## Tech Stack
 
@@ -46,12 +49,43 @@ My name is Mykhailo Shved and it's my final project in Tel-Ran tech school to sh
 4. Add API layers in case if it's needed
 5. Combine page classes in the tests
 
+## How to run tests?
+1. Run all the unit test classes.
+
+   `$ mvn test`
+2. Run all the unit test classes with clean up.
+
+   `$ mvn clean test`
+
+3. Run a single test class.
+
+   `$ mvn -Dtest=TestApp1 test`
+
+4. Run multiple test classes.
+
+   `$ mvn -Dtest=TestApp1,TestApp2 test`
+
+5. Run a single test method from a test class.
+
+   `$ mvn -Dtest=TestApp1#methodname test`
+
+6. Run tests with specific browser (firefox as example).
+
+   `$ mvn test -Dbrowser=firefox`
+
+## How to serve report after tests?
+1.You can generate a report using one of the following command:  
+`$ mvn allure:report`
+
+2.Report will be generated into temp folder. Web server with results will start.   
+`$ mvn allure:serve`
+
+
 
 ## The possible ways to fix tests
 
 1. Restart tests
-
-If the restart doesn't help - then let's dig deeper.
+.If the restart doesn't help - then let's dig deeper.
 
 2. If locator is broken.
 Try to find new, correct locator, add it to the specific page.
@@ -64,5 +98,7 @@ Update endpoint version and commit the changes.
 
 ## Authors
 
-- [@behaunter (Shved Mykhailo)](https://github.com/behaunter)
+- Github - [@behaunter ](https://github.com/behaunter)
+- Telegram - [@DJ_Misha  ](https://t.me/DJ_Misha)
+- Email - [shved.mih5@gmail.com ](mailto:shved.mih5@gmail.com)
 

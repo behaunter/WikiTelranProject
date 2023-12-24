@@ -23,14 +23,14 @@ public class LoginTest extends TestBase {
     }
 
     @Test
-    public void successLogin(){
+    public void checkSuccessLogin(){
         loginPage.logInAccount(Constants.VALID_USER_NAME, Constants.VALID_PASSWORD);
         loginPage.LogOutBtn.shouldBe(visible);
         $(byText(Constants.VALID_USER_NAME)).shouldBe(visible);
     }
 
     @Test
-    public void incorrectLogin(){
+    public void checkIncorrectLoginError(){
         loginPage.logInAccount(Constants.RAND_USERNAME, Constants.RAND_PASSWORD);
         loginPage.errorBox.shouldHave(text(Constants.INCORRECT_DATA_ERROR));
     }

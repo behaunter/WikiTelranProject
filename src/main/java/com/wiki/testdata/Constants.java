@@ -7,11 +7,11 @@ public class Constants {
 
     //Create Account Page
     public static final String CREATE_ACCOUNT_TEXT = "Create account";
-    public static final String TEST_USERNAME = RandomStringUtils.randomAlphanumeric(3, 10);
+//    public static final String TEST_USERNAME = RandomStringUtils.randomAlphanumeric(3, 10);
     public static final String TEST_PASSWORD = RandomStringUtils.randomAlphanumeric(8, 20);
     public static final String TEST_EMAIL = RandomStringUtils.randomAlphanumeric(8, 20) + "@gmail.com";
     public static final String TEST_REAL_NAME = RandomStringUtils.randomAlphanumeric(3, 20);
-    public static final String SUCCESSFUL_REGISTER = "Welcome, " + TEST_USERNAME + "!";
+    public static final String SUCCESSFUL_REGISTER = "Welcome," ;
     public static final String MOST_COMMON_PASS_ERROR = "The password entered is in a list of very commonly used passwords. " +
             "Please choose a more unique password.";
     public static final String TOO_SHORT_PASS_ERROR = "Passwords must be at least 8 characters.";

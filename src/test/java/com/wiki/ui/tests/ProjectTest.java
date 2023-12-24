@@ -17,6 +17,6 @@ public class ProjectTest extends TestBase {
         projectPage.editBtn.click();
         projectPage.editText(Constants.TEXT_PROJECT);
         projectPage.readBtn.click();
-        $(byText(Constants.TEXT_DISCUSSION)).shouldBe(visible);
+        $(byText(Constants.TEXT_PROJECT)).shouldBe(visible);
     }
 }
