@@ -6,8 +6,7 @@ public class Constants {
     public static final String WIKI_URL = "http://wiki.telran-edu.de:8989/";
 
     //Create Account Page
-    public static final String CREATE_ACCOUNT_TEXT = "Create account";
-//    public static final String TEST_USERNAME = RandomStringUtils.randomAlphanumeric(3, 10);
+
     public static final String TEST_PASSWORD = RandomStringUtils.randomAlphanumeric(8, 20);
     public static final String TEST_EMAIL = RandomStringUtils.randomAlphanumeric(8, 20) + "@gmail.com";
     public static final String TEST_REAL_NAME = RandomStringUtils.randomAlphanumeric(3, 20);
